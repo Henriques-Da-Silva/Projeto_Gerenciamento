@@ -1,0 +1,10 @@
+frutas = [{'Nome': 'Maça', 'Preco': 300, 'Quantidade': 15, 'Total Vendido': 0},
+          {'Nome': 'Manga', 'Preco': 100, 'Quantidade': 10, 'Total Vendido': 0},
+          {'Nome': 'Banana', 'Preco': 200, 'Quantidade': 13, 'Total Vendido': 0},
+          {'Nome': 'Uva', 'Preco': 500, 'Quantidade': 15, 'Total Vendido': 0},
+          {'Nome': 'Morango', 'Preco': 700, 'Quantidade': 11, 'Total Vendido': 0},
+          {'Nome': 'Ananás', 'Preco': 300, 'Quantidade': 10, 'Total Vendido': 0},
+          {'Nome': 'Limão', 'Preco': 100, 'Quantidade': 10, 'Total Vendido': 0},
+          {'Nome': 'Melancia', 'Preco': 600, 'Quantidade': 15, 'Total Vendido': 0},
+          {'Nome': 'Amora', 'Preco': 500, 'Quantidade': 10, 'Total Vendido': 0},
+          {'Nome': 'Kiwi', 'Preco': 400, 'Quantidade': 14, 'Total Vendido': 0}]
