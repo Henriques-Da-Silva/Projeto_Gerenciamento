@@ -32,6 +32,7 @@ class BarracaDeFrutas():
     
     def main(self):
         global opcao
+        
         while opcao != 8:
             print('='*50)
             print(Fore.GREEN + '         GERENCIAMENTO DA LOJA DE FRUTAS',end='')
@@ -39,6 +40,7 @@ class BarracaDeFrutas():
             print('='*50)
             print('1- Vender \n2- Remover Fruta. \n3- Adicionar Qtd em estoque de uma fruta. \n4- Adicionar Fruta. \n5- Buscar Fruta. \n6- Exibir Dados das Frutas. \n7- Relatórios. \n8- Sair.')
             print('='*50)
+            
             try:
                 opcao = int(input(Fore.GREEN + 'Opção: '))
                 print(Style.RESET_ALL, end='')
@@ -72,6 +74,7 @@ class BarracaDeFrutas():
                         print('OPÇÃO INVÁLIDA!')
                         time.sleep(3)
                         os.system('cls')
+                        
             except ValueError:
                 os.system('cls')
                 print(Style.RESET_ALL, end='')
@@ -96,6 +99,7 @@ class BarracaDeFrutas():
         print('='*46)
         nome = input('Digite o nome da fruta: ')
         print('='*46)
+        
         for fruta, dados in frutas.items():
             if fruta.lower() == nome.lower():
                 encontrada = True
@@ -104,6 +108,7 @@ class BarracaDeFrutas():
                 print(Style.RESET_ALL)
                 print('='*46)
                 op = 4
+                
                 while op != 1:
                     try:
                         op = int(input('1- Voltar.\nOpção: '))
@@ -118,6 +123,7 @@ class BarracaDeFrutas():
                         print(Fore.RED + 'OPÇÃO INVÁLIDA!', end='')
                         print(Style.RESET_ALL)
                         time.sleep(3)
+                        
         if encontrada == False:
             print(Fore.RED + f'A fruta "{nome}" não está na sua lista de frutas.', end='')
             print(Style.RESET_ALL)
@@ -135,6 +141,7 @@ class BarracaDeFrutas():
         print('='*46)
         nome = input('Insira o Nome da Fruta: ')
         print('='*46)
+        
         for fruta, dados in frutas.items():
             if fruta.lower() == nome.lower():
                 encontrada = True
@@ -155,6 +162,7 @@ class BarracaDeFrutas():
                         print(Style.RESET_ALL)
                         time.sleep(5)
                         self.adicionar_quantidade_de_uma_fruta()
+                        
                 except ValueError:
                     print('='*46)
                     print(Fore.RED + 'Insira somente valor inteiro pra quantidade.')
@@ -182,6 +190,7 @@ class BarracaDeFrutas():
         print('='*46)
         nome = input('Digite o nome da fruta: ')
         print('='*46)
+        
         for fruta, dados in frutas.items():
             if fruta.lower() == nome.lower():
                 encontrada = True
@@ -192,6 +201,7 @@ class BarracaDeFrutas():
                 print(f'|{fruta:^10}|{dados['preço']:^12}|{dados['quantidade']:^10}|{dados['Total Vendido']:^9}|')
                 print('='*46)
                 op = 4
+                
                 while op != 1:
                     try:
                         op = int(input('1- Voltar.\n2- Buscar outra fruta. \nOpção: '))
@@ -204,6 +214,7 @@ class BarracaDeFrutas():
                             print(Fore.RED + 'OPÇÃO INVÁLIDA!', end='')
                             print(Style.RESET_ALL)
                             time.sleep(3)
+                            
                     except ValueError:
                         print(Fore.RED + 'OPÇÃO INVÁLIDA!', end='')
                         print(Style.RESET_ALL)
@@ -227,9 +238,11 @@ class BarracaDeFrutas():
             print(Style.RESET_ALL)
             print('='*46)
             print('|___Nome___|_Preço(kzs)_|Quantidade|_Vendido_|')
+            
             for fruta, dados in frutas.items():
                 print(f'|{fruta:^10}|{dados['preço']:^12}|{dados['quantidade']:^10}|{dados['Total Vendido']:^9}|')
             print('='*46)
+            
             while op != 1:
                 try:
                     op = int(input('1- Voltar.\nOpção: '))
@@ -240,6 +253,7 @@ class BarracaDeFrutas():
                         print(Fore.RED + 'OPÇÃO INVÁLIDA!', end='')
                         print(Style.RESET_ALL)
                         time.sleep(3)
+                        
                 except ValueError:
                         print(Fore.RED + 'OPÇÃO INVÁLIDA!', end='')
                         print(Style.RESET_ALL)
@@ -252,6 +266,7 @@ class BarracaDeFrutas():
             for fruta, dados in frutas.items():
                 total_fruta = float(dados['preço']) * int(dados['quantidade'])
                 total += total_fruta
+                
             print('='*50)
             print(Fore.YELLOW + 'Total Pressuposto com as Vendas: ', total, ' kzs', end='')
             print(Style.RESET_ALL)
@@ -261,11 +276,13 @@ class BarracaDeFrutas():
             for fruta, dados in frutas.items():
                 total_fruta = float(dados['preço']) * int(dados['Total Vendido'])
                 total_adquirido += total_fruta
+                
             print('='*50)
             print(Fore.YELLOW + 'Total Adquirido até Agora: ', total_adquirido, ' kzs', end='')
             print(Style.RESET_ALL)
             print('='*50)
             op = 4
+            
             while op != 1:
                 try: 
                     op = int(input('1- Voltar.\nOpção: '))
@@ -275,6 +292,7 @@ class BarracaDeFrutas():
                     else:
                         print('OPÇÃO INVÁLIDA!')
                         time.sleep(3)
+                        
                 except ValueError:
                         print(Fore.RED + 'OPÇÃO INVÁLIDA!', end='')
                         print(Style.RESET_ALL)
