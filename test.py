@@ -47,7 +47,7 @@ while True:
     opcao = input("Escolha uma opção: ")
 
     if opcao == "1":
-        barraca.exibir_estoque()
+        barraca.estoque()
     elif opcao == "2":
         fruta = input("Digite o nome da fruta: ")
         qtd = int(input("Quantidade a vender: "))
